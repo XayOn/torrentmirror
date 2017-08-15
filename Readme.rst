@@ -15,32 +15,14 @@ in your terminal
 .. image:: http://i.imgur.com/HdY0NIl.png
 
 
-Usage
-+++++
+\:star\: Usage
+++++++++++++++++
 
 ::
 
     TorrentMirror.
 
         Usage: torrentmirror [<torrent_mirror_url>]
-
-
-
-\:notebook\: Library Usage
----------------------------
-
-TorrentMirror exposes a simple get_proxies method::
-
-        def get_proxies(url="https://www.torrentmirror.net/",
-                        filter_offline=True)
-
-
-It returns a dict in the form::
-
-        {"site_name": [["proxy_1", "status"], ["proxy_2", "status]]
-
-Where status can be "ONLINE" or anything that starts with "OFFLINE".
-
 
 
 \:star\: Installation
@@ -58,3 +40,20 @@ With python3.5 installed just execute::
 
 If it asks about permissions and you don't know what to do, you should
 probably read `Jamie Matthews's article about virtualenvs <https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/>`_
+
+
+
+\:notebook\: Library Usage
+---------------------------
+
+TorrentMirror exposes a simple get_proxies method::
+
+        def get_proxies(url="https://www.torrentmirror.net/",
+                        filter_offline=True)
+
+
+It returns a dict in the form::
+
+        {"site_name": [["proxy_1", "status"], ["proxy_2", "status]]
+
+Where status can be "ONLINE" or anything that starts with "OFFLINE".
