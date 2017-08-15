@@ -14,6 +14,7 @@ def get_proxies(url="https://www.torrentmirror.net/", filter_offline=True):
     page.open(url)
     proxies = defaultdict(list)
 
+    # pylint: disable=not-callable
     for link in page.find_all(class_='mirror-links'):
         name = link.find('thead').find('th').text.split('\n')[1]
         for row in link.find_all('tr'):
