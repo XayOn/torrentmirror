@@ -9,9 +9,8 @@ Python library to expose torrentmirror as a command and python library.
 \:tv\: torrentmirror - TorrentMirror CLI Interface
 ------------------------------------------------------
 
-katcr comes with a simple but powerful command line interface, able to
-return either magnets or torrents.
-
+You can invoke torrentmirror command to have a nice tabulated list of mirrors
+in your terminal
 
 .. image:: http://i.imgur.com/HdY0NIl.png
 
