@@ -33,7 +33,9 @@ This is a python package available on pypi.
 On windows and mac `you can download python3.5 here <https://www.python.org/downloads/release/python-352/>`_.
 On linux distros, python3.5 is already on most package managers :smile:
 
-With python3.5 installed just execute::
+With python3.5 installed just execute
+
+code:: sh
 
     pip3.5 install torrentmirror
 
@@ -46,14 +48,19 @@ probably read `Jamie Matthews's article about virtualenvs <https://www.dabapps.c
 \:notebook\: Library Usage
 ---------------------------
 
-TorrentMirror exposes a simple get_proxies method::
+TorrentMirror exposes a simple get_proxies method
+
+
+code:: python
 
         def get_proxies(url="https://www.torrentmirror.net/",
                         filter_offline=True)
 
 
-It returns a dict in the form::
+It returns a dict in the form
 
-        {"site_name": [["proxy_1", "status"], ["proxy_2", "status]]
+code:: python 
+
+        {"site_name": [["proxy_1", "status"], ["proxy_2", "status"]]
 
 Where status can be "ONLINE" or anything that starts with "OFFLINE".

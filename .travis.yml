@@ -1,13 +1,19 @@
 language: python
 python:
-   - '3.5'
-   - '3.6'
+   - '3.8'
 
-install:
-    - pip install .
-    - pip install tox
+cache:
+  pip: true
+  directories:
+    - $HOME/.cache/pypoetry
+    - $HOME/.cache/pre-commit
 
-script: tox
+script: 
+  - curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
+  - python get-poetry.py --preview -y
+  - source $HOME/.poetry/env
+  - poetry run tox
 
-addons:
-  rethinkdb: "2.3"
+jobs:
+  include:
+    - python: "3.8"
