@@ -30,14 +30,11 @@ in your terminal
 
 This is a python package available on pypi.
 
-On windows and mac `you can download python3.5 here <https://www.python.org/downloads/release/python-352/>`_.
-On linux distros, python3.5 is already on most package managers :smile:
-
-With python3.5 installed just execute
+With python3.8 installed just execute
 
 code:: sh
 
-    pip3.5 install torrentmirror
+    pip3.8 install torrentmirror
 
 
 If it asks about permissions and you don't know what to do, you should
@@ -53,14 +50,23 @@ TorrentMirror exposes a simple get_proxies method
 
 code:: python
 
-        def get_proxies(url="https://www.torrentmirror.net/",
-                        filter_offline=True)
-
+        get_proxies(url="https://www.torrentmirror.net/", renew=False)
 
 It returns a dict in the form
 
 code:: python 
 
-        {"site_name": [["proxy_1", "status"], ["proxy_2", "status"]]
-
-Where status can be "ONLINE" or anything that starts with "OFFLINE".
+        {
+          "site_name": [
+            {
+              "link": "http://foo.com",
+              "status": "ONLINE",
+              "percentage": 40
+            },
+            {
+              "link": "http://foo.com",
+              "status": "ONLINE",
+              "percentage": 40
+            }
+          ]
+        }
