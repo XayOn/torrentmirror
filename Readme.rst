@@ -32,7 +32,7 @@ This is a python package available on pypi.
 
 With python3.8 installed just execute
 
-code:: sh
+.. code:: sh
 
     pip3.8 install torrentmirror
 
@@ -48,13 +48,13 @@ probably read `Jamie Matthews's article about virtualenvs <https://www.dabapps.c
 TorrentMirror exposes a simple get_proxies method
 
 
-code:: python
+.. code:: python
 
         get_proxies(url="https://www.torrentmirror.net/", renew=False)
 
 It returns a dict in the form
 
-code:: python 
+.. code:: python 
 
         {
           "site_name": [
