@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torrentmirror"
-version = "2.0.2"
+version = "2.0.3"
 description = "TorrentMirror API and CLI interface"
 authors = ["David Francos <opensource@davidfrancos.net>"]
 readme = 'Readme.rst'
