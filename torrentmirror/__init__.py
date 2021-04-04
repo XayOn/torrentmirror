@@ -5,6 +5,8 @@ import warnings
 from contextlib import suppress
 from collections import defaultdict
 from docopt import docopt
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
 import robobrowser
 from tabulate import tabulate
 import xdg
@@ -41,9 +43,11 @@ def get_proxies(url="https://www.torrentmirror.net", renew=False):
 
             status = row.find(class_='proxy-statues')
             percentage = row.find(class_='proxy-like').find(class_='counts')
+            print(row)
             proxies[link.find('span').text].append(
                 dict(link=name_.find('a').attrs['href'],
-                     percentage=int(percentage.text.replace('%', '')),
+                     percentage=int(
+                         getattr(percentage, 'text', '0').replace('%', '')),
                      status=status.text.strip()))
 
     proxies = dict(proxies)

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torrentmirror"
-version = "2.0.0"
+version = "2.0.1"
 description = "TorrentMirror API and CLI interface"
 authors = ["David Francos <opensource@davidfrancos.net>"]
 readme = 'Readme.rst'
@@ -11,7 +11,6 @@ robobrowser = "^0.5.3"
 cleo = "^0.8.1"
 pygogo = "^0.13.2"
 docopt = "^0.6.2"
-werkzeug = "0.16.1"
 tabulate = "^0.8.7"
 yapf = "^0.30.0"
 xdg = "^5.0.1"
